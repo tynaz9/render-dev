@@ -14,6 +14,10 @@ app.get("/name/:name",(req,res)=>{
     res.send(`My name is ${name} `);
 });
 
+app.get("/branch",(req,res)=>{
+    const {branch}=req.query;
+    res.send(`My branch is ${branch}`)
+})
 
 app.listen(port,()=>{
     console.log(`The server is running on http://localhost:${port}`);
